@@ -1,0 +1,31 @@
+{
+  "name": "brunch-ts",
+  "version": "0.0.1",
+  "description": "Adds TypeScript support to brunch, based off of brunch-typescript",
+  "author": "Paul Sastrasinh",
+  "homepage": "https://github.com/psastras/brunch-ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/psastras/brunch-ts.git"
+  },
+  "main": "./index.js",
+  "dependencies": {
+    "typescript": "1.6.*"
+  },
+  "bugs": {
+    "url": "https://github.com/psastras/brunch-ts/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "brunch",
+    "tsc"
+  ],
+  "license": "MIT",
+  "devDependencies": {},
+  "peerDependencies": {
+    "brunch": ">= 1.8.0"
+  }
+}
