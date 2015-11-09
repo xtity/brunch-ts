@@ -39,12 +39,18 @@ module.exports = TypeScriptCompiler = (function () {
         cmd.push(opt.tscOption);
 
         var child = exec.exec(cmd.join(' '), function (error, stdout, stderr) {
+            if (error) { // TODO 設定からエラーで止めるか指定
+                return callback(error + "\n" + stdout + "\n" + stderr, params);
+            }
+
             outputFile = params.path.replace(/\.[^/.]+$/, ".js");
             fs.readFile(outputFile, 'utf8', function (err, data) {
                 if (err) {
                     console.log(err);
                 }
                 params.data = data;
+				// TODO 設定からJSファイル削除指定
+                fs.unlink(outputFile);
                 return callback(err, params);
             });
         });
